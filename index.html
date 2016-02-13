@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.css">
+  <link rel="stylesheet" href="app/assets/stylesheets/styles.css">
+  <title>Testing!</title>
+</head>
+<body ng-controller="MoneyCtrl as m">
+
+  <div class="header">
+    <h1><i class="fa fa-phone"></i>The Phone Collector!</h1>
+  </div>
+  <hr>
+  <div class="info">
+    <!-- <p class="money"> {{ m.count}}: phones <i class="fa fa-mobile"></i></p> -->
+    <p class="money"> {{ m.player.phones}}: phones <i class="fa fa-mobile"></i></p>
+  </div>
+
+  <section class="game">
+    <button class="btn btn-info btn-lg" ng-click="m.click()" id='main'>
+      Find Phone.
+    </button>
+  <br>
+    {{m.message }}
+    <br>
+    <br>
+
+    <button class="btn btn-danger btn-sm" id="wildcard" ng-click='m.buildFortress(m.player.fortPieces)'>
+      Build a mighty phone fortress?
+    </button>
+    <br>
+    <i class="fa fa-fort-awesome fa-5x" ng-if="m.fort"></i>
+  </section>
+
+  <div class='workers' ng-repeat="pic in m.icons track by $index">
+    <div class="row">
+      <div class="col-xs-4" >
+        <ul>
+            <li><i class={{pic}}>W</i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <aside class="shop">
+    <h3>The Store</h3>
+    <button class="btn btn-primary" ng-click="m.hireWorker(m.player.phones)" ng-model="m.workerLimit" ng-disabled="m.workerLimit">
+      <i class="fa fa-user"></i> Hire Worker
+    </button>
+    <span><p> Cost 10 phones</p></span>
+
+    <button class="btn btn-primary" ng-click="m.hireManager(m.player.phones)" ng-model="m.managerLimit" ng-disabled="m.managerLimit">
+      <i class="fa fa-briefcase"></i> Hire Manager
+    </button>
+    <span><p> Cost 75 phones</p></span>
+
+    <button class="btn btn-primary" ng-click="m.newShop(m.player.phones)">
+      <i class="fa fa-building-o"></i> Build Shop
+    </button>
+    <span><p> Cost 450 phones</p></span>
+
+    <button class="btn btn-primary" ng-click="m.bettingShop(m.player.phones)">
+      <i class="fa fa-money"></i>Open Betting Shop
+    </button>
+    <span><p> Cost 1500 phones</p></span>
+
+    <button class="btn btn-primary" ng-click="m.deepDive(m.player.phones)">
+      <i class="fa fa-ship"></i> Deep Sea Dive
+    </button>
+    <span><p> Cost 3000 phones</p></span>
+
+    <button class="btn btn-primary" ng-click="m.spaceExploration(m.player.phones)">
+      <i class="fa fa-space-shuttle"></i>Install Satellite
+    </button>
+    <span><p> Cost 10,000 phones</p></span>
+
+  </aside>
+
+  <div class="test">
+      <p>
+        {{m.player}}
+      </p>
+    </div>
+
+
+  <section class="save">
+    <button class="btn" ng-click="m.saveGame()">
+      Save
+    </button>
+    <button class="btn" ng-click="m.load()">
+      Load
+    </button>
+  </section>
+
+  <!-- <button class="btn btn-danger" ng-click="m.doubleSpeed(m.count)">
+    Buy 2x Speed!
+  </button> -->
+
+    <!-- Message test : {{ m.message}} -->
+<!-- <button class="btn btn-info" ng-click="m.tripleSpeed()">
+  Triple Speed?!
+</button> -->
+<div ui-view></div>
+
+<script src="angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+<script src="bower_components/ngstorage/ngStorage.min.js"></script>
+<script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+<script src="app/app.js"></script>
+</body>
+</html>

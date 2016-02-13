@@ -1,0 +1,101 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+body {
+  background: mintcream;
+  text-align:center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:300;
+}
+.header {
+  h1 {
+    font-weight:400;
+  }
+}
+.info {
+  height:70px;
+  p {
+    //color:white;
+    font-size:2em;
+    text-align:right;
+    margin-right:30px;
+  }
+}
+.game {
+  #main {
+    display: block;
+    width:50%;
+    padding:30px;
+    //margin-bottom:10px;
+    margin:0 auto;
+  }
+  #wildcard {
+    padding:30px;
+  }
+}
+
+.workers {
+  //margin:0 auto;
+  //width:100%;
+  bottom:250px;
+  position: relative;;
+  margin:0 auto;
+  width:100%;
+  ul {
+    float:center;
+    li {
+      width:100%;
+      display: inline;
+      float:right;
+      //list-style: none;
+    }
+  }
+}
+
+.shop {
+  position: absolute;
+  top:110px;
+  float:left;
+  height:500px;
+  //border-right: 1px solid gray;
+  h3 {
+    font-weight:300;
+  }
+  .btn {
+    display: block;
+    font-size:0.1em;
+    width:110px;
+    padding:10px;
+    //margin-bottom:10px;
+  }
+    p {
+    color:grey;
+    font-size: 1em;
+  }
+}
+
+.test {
+  position:relative;
+  top:170px;
+  max-width:500px;
+  margin:0 auto;
+  p {
+    width:50%;
+    position: relative;
+  }
+}
+
+.save {
+  background:#429fec;
+  height:100px;
+  width:100%;
+  bottom:0px;
+  // margin-top:10px;
+  position: absolute;;
+  button {
+    width:25%;
+    padding:10px;
+    background:#0f5a97;
+    color:white;
+    margin:10px;
+  }
+}

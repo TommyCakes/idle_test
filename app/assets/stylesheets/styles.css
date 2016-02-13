@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+body {
+  background: mintcream;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300; }
+
+.header h1 {
+  font-weight: 400; }
+
+.info {
+  height: 70px; }
+  .info p {
+    font-size: 2em;
+    text-align: right;
+    margin-right: 30px; }
+
+.game #main {
+  display: block;
+  width: 50%;
+  padding: 30px;
+  margin: 0 auto; }
+
+.game #wildcard {
+  padding: 30px; }
+
+.workers {
+  bottom: 250px;
+  position: relative;
+  margin: 0 auto;
+  width: 100%; }
+  .workers ul {
+    float: center; }
+    .workers ul li {
+      width: 100%;
+      display: inline;
+      float: right; }
+
+.shop {
+  position: absolute;
+  top: 110px;
+  float: left;
+  height: 500px; }
+  .shop h3 {
+    font-weight: 300; }
+  .shop .btn {
+    display: block;
+    font-size: 0.1em;
+    width: 110px;
+    padding: 10px; }
+  .shop p {
+    color: grey;
+    font-size: 1em; }
+
+.test {
+  position: relative;
+  top: 170px;
+  max-width: 500px;
+  margin: 0 auto; }
+  .test p {
+    width: 50%;
+    position: relative; }
+
+.save {
+  background: #429fec;
+  height: 100px;
+  width: 100%;
+  bottom: 0px;
+  position: absolute; }
+  .save button {
+    width: 25%;
+    padding: 10px;
+    background: #0f5a97;
+    color: white;
+    margin: 10px; }
